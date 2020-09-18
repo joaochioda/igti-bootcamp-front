@@ -1,0 +1,4 @@
+Conhecimentos aprendidos:
+
+npm install -g live-server
+liver server - para criar servidor
