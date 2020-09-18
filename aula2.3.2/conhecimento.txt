@@ -1,0 +1,7 @@
+Conhecimentos aprendidos:
+
+if ternario
+
+while
+
+for

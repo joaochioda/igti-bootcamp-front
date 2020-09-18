@@ -1,0 +1,5 @@
+Conhecimentos aprendidos:
+
+tipos: number, string, boolean, null, undefined, object
+
+typeof(5) = pega o tipo de 5

@@ -1,0 +1,6 @@
+Conhecimentos aprendidos:
+
+npm init para criar um projeto
+npm install live-server --save-dev (instalar dependencia local)
+
+criando script em package.json
