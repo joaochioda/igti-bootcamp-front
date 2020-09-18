@@ -1,0 +1,8 @@
+Conhecimentos aprendidos:
+
+caminho relativo x caminho absoluto
+
+<p> paragrafos
+<h1> a <h6> titulos
+<span> trecho a serem destacados
+<strong> enfase no texto
