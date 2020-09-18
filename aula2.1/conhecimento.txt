@@ -1,0 +1,6 @@
+Conhecimentos aprendidos:
+
+importar javascript na pagina
+liver server como extensao do visual studio
+
+script pegando titulo e trocando por nova mensagem
