@@ -1,0 +1,16 @@
+Conhecimentos aprendidos:
+
+h1 => seletor
+
+padding: 10px => declaração
+
+color: => propriedade
+blue => valor
+
+elemento = propria tag
+
+classe = representado por um '.'
+
+id = representado por '#'
+
+css reset = tecnica para remover o css padrao dos navegadores
