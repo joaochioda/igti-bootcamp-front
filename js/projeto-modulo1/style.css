@@ -1,0 +1,102 @@
+body {
+    background: #30336b;
+}
+
+h1 {
+    color: violet;
+    display: flex;
+    justify-content: center;
+}
+
+.field-div {
+    font-size: 22px;
+    color: violet;
+    margin: 1rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    text-align: center;
+}
+
+.field-div > label:nth-child(2) {
+    color: rgb(224, 86, 253);
+}
+
+.grid-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.grid-div {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 2rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: rgb(224, 86, 253);
+    font-size: 22px;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgb(72, 52, 212)
+}
+
+.button-div {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    outline: none;
+    width: 22vw;
+    height: 3rem;
+    border: 1px solid;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+}
+
+.calculate  {
+    background: rgb(126, 214, 223);
+}
+
+.calculate:hover {
+    transition: background 0.5s;
+    background: rgb(126, 214, 223, 0.3);
+}
+
+.calculate:active {
+    background: violet;
+    transition: background 0.2s;
+}
+
+.clean {
+    position: fixed;
+    background:rgb(255, 121, 121)
+}
+
+
+.clean:hover {
+    transition: background 0.5s;
+    background:rgb(255, 121, 121, 0.3)
+}
+
+.clean:active  {
+    background: violet;
+    transition: background 0.2s;
+}
+
+

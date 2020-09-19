@@ -82,7 +82,8 @@ function divisoresDeB(b) {
      return total;
 }
 
-function calculate() {
+function calculate(as) {
+    console.log(as);
     const a = parseInt(document.getElementsByClassName("valueA")[0].value,10);
     const b = parseInt(document.getElementsByClassName("valueB")[0].value,10);
     
@@ -128,29 +129,17 @@ function calculate() {
 
 
 function clean() {
-    const sumLabel = document.getElementsByClassName('sumA')[0];
-    const subLabel = document.getElementsByClassName('subA')[0];
-    const subLabelB = document.getElementsByClassName('subB')[0];
-    const multLabel = document.getElementsByClassName('multi')[0];
-    const dividerLabelA = document.getElementsByClassName('dividerA')[0];
-    const dividerLabelB = document.getElementsByClassName('dividerB')[0];
-    const eleveteLabelA = document.getElementsByClassName('elevateA')[0];
-    const eleveteLabelB = document.getElementsByClassName('elevateB')[0];
-    const divisorLabelA = document.getElementsByClassName('divisoresA')[0];
-    const divisorLabelB = document.getElementsByClassName('divisoresB')[0];
-    const fatorialDeALabel = document.getElementsByClassName('fatorialA')[0];
-    const fatorialDeBLabel = document.getElementsByClassName('fatorialB')[0];
-
-    sumLabel.textContent = '';
-    subLabel.textContent = '';
-    subLabelB.textContent = '';
-    multLabel.textContent = '';
-    dividerLabelA.textContent = '';
-    dividerLabelB.textContent = '';
-    eleveteLabelA.textContent = '';
-    eleveteLabelB.textContent = '';
-    divisorLabelA.textContent = '';
-    divisorLabelB.textContent = '';
-    fatorialDeALabel.textContent = '';
-    fatorialDeBLabel.textContent = '';
+    document.getElementsByClassName('sumA')[0].textContent = '';
+    document.getElementsByClassName('subA')[0].textContent = '';
+    document.getElementsByClassName('subB')[0].textContent = '';
+    document.getElementsByClassName('multi')[0].textContent = '';
+    document.getElementsByClassName('dividerA')[0].textContent = '';
+    document.getElementsByClassName('dividerB')[0].textContent = '';
+    document.getElementsByClassName('elevateA')[0].textContent = '';
+    document.getElementsByClassName('elevateB')[0].textContent = '';
+    document.getElementsByClassName('divisoresA')[0].textContent = '';
+    document.getElementsByClassName('divisoresB')[0].textContent = '';
+    document.getElementsByClassName('fatorialA')[0].textContent = '';
+    document.getElementsByClassName('fatorialB')[0].textContent = '';
+    
 }
