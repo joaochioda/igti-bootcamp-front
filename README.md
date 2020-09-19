@@ -9,6 +9,8 @@
 ## Resultados projetos finais
 
 #### JS - Super calculadora
+* Objetivo: montar uma super calculadora utilizando apenas html, javascript e css
+
 ![calculadora](https://user-images.githubusercontent.com/47106171/93672386-d7b5df80-fa80-11ea-99ff-5630ae111400.gif)
 
 
