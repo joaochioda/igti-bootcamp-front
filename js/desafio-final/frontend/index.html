@@ -7,25 +7,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="loadPeople()">
-    <h1>Pesquisas</h1>
-    <input placeholder="Pesquisa por nome" onkeyup="typeData(this.value)"/>
-    <input type="checkbox" id="java" name="java" onchange="mainFilter()">
-    <label>java</label>
+    <h1>Filtro de Pessoas</h1>
+    <div class="div-input-name">
+        <input class="input-name" placeholder="Filtre por uma pessoa" onkeyup="typeData(this.value)"/>
+    </div>
+    <div class="div-all-filters">
 
-    <input type="checkbox" id="javascript" name="javascript" onchange="mainFilter()">
-    <label>javascript</label>
+    <div>
 
-    <input type="checkbox" id="python" name="python" onchange="mainFilter()">
-    <label>python</label>
+        <input type="checkbox" id="java" name="java" onchange="mainFilter()">
+        <label>Java</label>
+    
+        <input type="checkbox" id="javascript" name="javascript" onchange="mainFilter()">
+        <label>JavaScript</label>
+    
+        <input type="checkbox" id="python" name="python" onchange="mainFilter()">
+        <label>Python</label>
+    </div>
 
-    <input type="checkbox" id="and" name="and" onchange="mainFilter()">
-    <label>E</label>
+    <div>
+        <input type="checkbox" id="and" name="and" onchange="mainFilter()">
+        <label>E</label>
+    
+        <input type="checkbox" id="or" name="or" onchange="mainFilter()">
+        <label>OU</label>
+    </div>
 
-    <input type="checkbox" id="or" name="or" onchange="mainFilter()">
-    <label>OU</label>
+    </div>
 
-    <span class="counter-dev">-</span>
-    <span>dev(s) encontrado(s)</span>
+    <div class="div-counter-dev">
+        <span class="counter-dev">-</span>
+        <span>dev(s) encontrado(s)</span>
+    </div>
+       
+    
 
 
     <div class="render-people">

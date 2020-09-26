@@ -96,10 +96,14 @@ function renderPeople() {
     let newDiv = ''
     people.forEach(person => {
         const skills = renderSkills(person.programmingLanguages)
-        newDiv = newDiv + `<div> 
-        <img src="${person.picture}" width="48" height="48" alt="Person photo"
+        newDiv = newDiv + `<div class="person"> 
+        <img src="${person.picture}" width="48" height="48" alt="Person photo"/>
+        <div class="div-person-name-skills">
         <span>${person.name}</span>
+        <div class="div-person-skills">
         ${skills}
+        </div>
+        </div>
         </div>`
     })
     getPeopleLength();
@@ -109,7 +113,7 @@ function renderPeople() {
 function renderSkills(programmingLanguages) {
     let skills = '';
     programmingLanguages.forEach(language => {
-        skills = skills + `<img src="${getImage(language.language)}" width="48" height="48" alt="Languages">`
+        skills = skills + `<img src="${getImage(language.language)}" width="24" height="24" alt="Languages">`
     })
 
     return skills;
