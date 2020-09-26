@@ -9,19 +9,19 @@
 <body onload="loadPeople()">
     <h1>Pesquisas</h1>
     <input placeholder="Pesquisa por nome" onkeyup="typeData(this.value)"/>
-    <input type="checkbox" id="java" name="java">
+    <input type="checkbox" id="java" name="java" onchange="mainFilter()">
     <label>java</label>
 
-    <input type="checkbox" id="javascript" name="javascript">
+    <input type="checkbox" id="javascript" name="javascript" onchange="mainFilter()">
     <label>javascript</label>
 
-    <input type="checkbox" id="python" name="python">
+    <input type="checkbox" id="python" name="python" onchange="mainFilter()">
     <label>python</label>
 
-    <input type="checkbox" id="and" name="and">
+    <input type="checkbox" id="and" name="and" onchange="mainFilter()">
     <label>E</label>
 
-    <input type="checkbox" id="or" name="or">
+    <input type="checkbox" id="or" name="or" onchange="mainFilter()">
     <label>OU</label>
 
     <span class="counter-dev">-</span>
