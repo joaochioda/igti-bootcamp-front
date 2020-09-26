@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadPeople()">
+    <h1>Pesquisas</h1>
+    <input placeholder="Pesquisa por nome" onkeyup="typeData(this.value)"/>
+    <input type="checkbox" id="java" name="java">
+    <label>java</label>
+
+    <input type="checkbox" id="javascript" name="javascript">
+    <label>javascript</label>
+
+    <input type="checkbox" id="python" name="python">
+    <label>python</label>
+
+    <input type="checkbox" id="and" name="and">
+    <label>E</label>
+
+    <input type="checkbox" id="or" name="or">
+    <label>OU</label>
+
+    <span class="counter-dev">-</span>
+    <span>dev(s) encontrado(s)</span>
+
+
+    <div class="render-people">
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
