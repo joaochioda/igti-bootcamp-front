@@ -1,6 +1,6 @@
-const javaScriptImage = "../assets/javascript.png";
-const javaImage = "../assets/java.png";
-const pythonImage = "../assets/python.png";
+const javaScriptImage = "./assets/javascript.png";
+const javaImage = "./assets/java.png";
+const pythonImage = "./assets/python.png";
 
 
 
