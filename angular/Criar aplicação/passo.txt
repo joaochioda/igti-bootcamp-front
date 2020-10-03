@@ -1,3 +1,5 @@
 ng new 'nome da aplicação' - criar aplicação
 ng serve - subir aplicação
 ng generate component 'nome' - gerar componente
+
+ngModel = two wai binding entre elevemtnos html de forms
