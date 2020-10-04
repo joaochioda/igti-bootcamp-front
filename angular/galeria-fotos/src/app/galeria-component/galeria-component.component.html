@@ -1,0 +1,18 @@
+<h3>{{titulo}}</h3>
+<ng-container *ngIf="pictures && pictures.length > 0; else conditionFalse">
+<div>
+    <img src={{pictures[selectedPicture]}} width="500" height="500">
+</div>
+<p>Foto {{selectedPicture +1}} de {{pictures.length}}</p>
+<div>
+
+<button (click)="buttonClick('goBegin')" [disabled]="selectedPicture === 0">|<</button>
+<button (click)="buttonClick('goLeft')" [disabled]="selectedPicture === 0"><</button>
+<button (click)="buttonClick('goRight')" [disabled]="selectedPicture === pictures.length -1">></button>
+<button (click)="buttonClick('goEnd')" [disabled]="selectedPicture === pictures.length -1">>|</button>
+</div>
+
+</ng-container>
+<ng-template #conditionFalse>
+    <p>Nenhuma foto</p>
+</ng-template>

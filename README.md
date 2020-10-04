@@ -23,3 +23,10 @@
 ![filtroPessoas](https://user-images.githubusercontent.com/47106171/94351450-f68f1580-002e-11eb-910a-b34a44086001.gif)
 
 
+#### Angular - Criar galeria de fotos
+
+* Objetito: criar componente para renderizar uma lista de fotos
+
+![fotosAnimais](https://user-images.githubusercontent.com/47106171/95016653-b0d3dd80-062a-11eb-906d-ba6b297d6058.gif)
+
+
