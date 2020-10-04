@@ -4,3 +4,26 @@
   (click)="onClick(i)"
   >{{ rating >= i ? "star" : "star_outline" }}</span
 >
+<div [class]="className">
+  teste classe dinamica
+</div>
+
+<div [class]="{box1: false}">
+  teste classe dinamica
+</div>
+
+<div [class.box1]="false">
+  teste classe dinamica
+</div>
+
+<div [class.box1]="true">
+  teste classe dinamica
+</div>
+
+<div [class]="className" [style.width.px]="boxSize">
+a
+</div>
+
+<p>
+  Tamanho <input type="number" [(ngModel)]="boxSize"/>
+</p>

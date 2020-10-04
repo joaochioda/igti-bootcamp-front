@@ -3,3 +3,4 @@ ng serve - subir aplicação
 ng generate component 'nome' - gerar componente
 
 ngModel = two wai binding entre elevemtnos html de forms
+:host = stylizar o proprio component
