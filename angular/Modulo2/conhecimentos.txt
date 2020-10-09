@@ -1,0 +1,10 @@
+ngOnInit() -> o que aconteceu quando o componente é criado
+ngOnDestroy() -> fazer uma ação quando o componente é destruido
+ngOnChanges() -> so é chamado quando o @Input() é mudado - geralmente 
+para fazer filtros de dados do backend
+
+construtor é chamado antes do componente ser montado, com isso
+vc nao tem acesso as input properties e nao se deve declarar
+funcoes no construtor
+
+JSON.stringify(x) -> ver o objeto

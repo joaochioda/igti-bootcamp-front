@@ -1,0 +1,9 @@
+<h1>Cadastro de treinos</h1>
+<div>
+  <div>
+    <button (click)="config = !config">{{!config ? 'Configurações' : 'Voltar'}}</button>
+  
+  </div>
+  <app-config [exercises]="exercises" *ngIf="config">Config</app-config>
+  <app-timer [exercises]="exercises" *ngIf="!config">Cronometro</app-timer>
+</div>
