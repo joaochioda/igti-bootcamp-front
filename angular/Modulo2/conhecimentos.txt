@@ -7,6 +7,9 @@ construtor é chamado antes do componente ser montado, com isso
 vc nao tem acesso as input properties e nao se deve declarar
 funcoes no construtor
 
+services - se vc declarar no escopo do componente, ele é instanciado so 
+para aquele componente. Agora se vc declara no escopo da aplicação (root)
+todo os dados serao compartilhados entre os componentes que utilizam
 ng generate pipe cpf - gerar pipe
 
 JSON.stringify(x) -> ver o objeto
