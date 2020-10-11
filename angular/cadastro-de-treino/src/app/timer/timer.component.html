@@ -1,15 +1,15 @@
-<div>{{formatTimeLeft(timeLeft)}}</div>
+<div>{{ts.timeLeft / 1000 | number: '1.1-1'}}</div>
 <div>
-  Ex {{ currentEx + 1 }}/{{ this.exercises.length }}:
-  {{ this.exercises[this.currentEx].name }}
+  Ex {{ ts.currentEx + 1 }}/{{ this.ts.exercises.length }}:
+  {{ this.ts.exercises[this.ts.currentEx].name }}
 </div>
 <div>
-  Repetição {{ currentRep + 1 }}/{{
-    this.exercises[this.currentEx].repetitions
+  Repetição {{ ts.currentRep + 1 }}/{{
+    this.ts.exercises[this.ts.currentEx].repetitions
   }}
 </div>
 <div>
-   {{formatPhase(phase)}}
+   {{formatPhase(ts.phase)}}
   </div>
 <div>
   <button (click)="start()">Iniciar</button>

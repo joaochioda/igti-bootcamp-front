@@ -8,11 +8,4 @@ import { Exercise } from './exercise';
 })
 export class AppComponent {
   config: boolean = false;
-  exercises: Exercise[] = [{
-    name: "Abdominal",
-    duration: 5,
-    preparation: 4,
-    repetitions: 3,
-    rest: 3
-  }];
 }

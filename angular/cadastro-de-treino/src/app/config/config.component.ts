@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Exercise } from '../exercise';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TimerService } from '../timer.services';
 
 @Component({
   selector: 'app-config',
@@ -7,23 +8,22 @@ import { Exercise } from '../exercise';
   styleUrls: ['./config.component.css'],
 })
 export class ConfigComponent {
-  
- @Input() exercises: Exercise[] = [];
 
-  exercise: Exercise = {
-    name: '',
-    duration: 30,
-    repetitions: 3,
-    preparation: 15,
-    rest: 30,
-  };
-  constructor() {}
+  exerciseForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    duration: new FormControl(30, Validators.required),
+    repetitions: new FormControl(3, Validators.required),
+    preparation: new FormControl(15, Validators.required),
+    rest: new FormControl(30, Validators.required),
+  });
+
+  constructor(public ts: TimerService) {}
 
   add() {
-    this.exercises.push(this.exercise);
-    this.exercise = { ...this.exercise, name: '' };
+    this.ts.add(this.exerciseForm.value);
+    this.exerciseForm.reset({ ...this.exerciseForm.value, name: '' })
   }
-  delete(i) {
-    this.exercises.splice(i,1);
+  delete(i: number) {
+    this.ts.delete(i);
   }
 }

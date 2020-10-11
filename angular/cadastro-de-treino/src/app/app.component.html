@@ -4,6 +4,6 @@
     <button (click)="config = !config">{{!config ? 'Configurações' : 'Voltar'}}</button>
   
   </div>
-  <app-config [exercises]="exercises" *ngIf="config">Config</app-config>
-  <app-timer [exercises]="exercises" *ngIf="!config">Cronometro</app-timer>
+  <app-config *ngIf="config">Config</app-config>
+  <app-timer *ngIf="!config">Cronometro</app-timer>
 </div>
