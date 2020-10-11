@@ -8,7 +8,7 @@ import { TEMA } from '../app.module';
 })
 export class C2Component implements OnInit {
 
-  constructor(private todoListService: TodoListService, @Inject(TEMA) public tema: string) {
+  constructor(public todoListService: TodoListService, @Inject(TEMA) public tema: string) {
   }
 
   ngOnInit(): void {

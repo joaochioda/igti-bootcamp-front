@@ -10,13 +10,13 @@ import { CpfPipe } from './cpf.pipe';
 import { JoinStringsPipe } from './join-strings.pipe';
 import { C2Component } from './c2/c2.component';
 import { TodoListService } from './todoList.service';
-
+import {ReactiveFormsModule } from '@angular/forms';
 export const TEMA = new InjectionToken<string>('app.theme');
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [AppComponent, CepPipe, CpfPipe, JoinStringsPipe, C2Component],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     TodoListService,

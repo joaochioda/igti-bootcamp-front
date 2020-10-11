@@ -29,3 +29,19 @@
 <button (click)="todoListService.add('Outro item')">Adicionar</button>
 
 <app-c2></app-c2>
+
+<h3>Formulario</h3>
+<form [formGroup]="myForms" (ngSubmit)="onSubmit()">
+  <label>Nome: <input formControlName="name" /></label>
+  <div *ngIf="myForms.get('name').errors?.required">
+    Este campo deve ser preenchido
+  </div>
+  <div *ngIf="myForms.get('name').errors?.forbiddenName">
+    Este nome esta proibido de ser usado em nossa aplicação
+  </div>
+  <label>Endereço: <input formControlName="address" /></label>
+  <input [disabled]="myForms.status != 'VALID'" type="Submit" value="Salvar" />
+</form>
+
+<p>{{ myForms.value | json }}</p>
+<p>Status formulario: {{ myForms.status }}</p>
