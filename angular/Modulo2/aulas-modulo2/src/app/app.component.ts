@@ -7,12 +7,15 @@ import {
   AbstractControl,
   ValidatorFn,
 } from '@angular/forms';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [TodoListService],
 })
+
 export class AppComponent {
   myForms = new FormGroup({
     name: new FormControl('', [Validators.required, forbiddenNameValidator('Joao')]),
@@ -28,7 +31,7 @@ export class AppComponent {
 
   todoListService: TodoListService;
 
-  constructor(todoListService: TodoListService) {
+  constructor(todoListService: TodoListService, private router: Router) {
     this.todoListService = todoListService;
   }
   //poderia declarar no construtor private todoListService: TodoListService
@@ -38,6 +41,10 @@ export class AppComponent {
   }
   onSubmit() {
     console.log(this.myForms.value);
+  }
+
+  goToPage2() {
+    this.router.navigate(['page2', '20'])
   }
 }
 

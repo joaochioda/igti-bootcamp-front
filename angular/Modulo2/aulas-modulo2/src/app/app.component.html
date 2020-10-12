@@ -45,3 +45,17 @@
 
 <p>{{ myForms.value | json }}</p>
 <p>Status formulario: {{ myForms.status }}</p>
+
+
+<ul>
+  <li>
+    <a routerLink="/page1" routerLinkActive="active">Page 1</a>
+  </li>
+  <li>
+    <a routerLink="/page2/1" routerLinkActive="active">Page 2</a>
+  </li>
+</ul>
+
+<button (click)="goToPage2()">Ir para pagina 2</button>
+
+<router-outlet></router-outlet>
