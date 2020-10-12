@@ -68,14 +68,14 @@ export class AppComponent {
   adicionarProduto() {
     const produto = this.form.value;
     this.htttpClient.post<Produto>(`${urlBase}/produtos`, produto).subscribe(novo => {
-      this.produtos.push(novo);
+      this.produtos = [...this.produtos, novo]
     })
   }
 
   excluirProduto(produto: Produto) {
     this.htttpClient.delete(`${urlBase}/produtos/${produto.id}`).subscribe(() => {
       const index = this.produtos.indexOf(produto);
-      this.produtos.splice(index, 1);
+      this.produtos = [...this.produtos.slice(0, index), ...this.produtos.slice(index +1)]
     })
   }
   addString(newString) {

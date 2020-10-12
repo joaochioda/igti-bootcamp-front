@@ -6,6 +6,19 @@ label {
     background: rebeccapurple;
 }
 
-input[type="number"] {
-    width: 5em;
+.preco {
+    width: 6em;
+    margin: 0 16px;
+}
+
+form {
+    padding: 0 16px;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-column-preco, .mat-column-acoes {
+    text-align: right;
 }
