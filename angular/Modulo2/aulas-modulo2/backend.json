@@ -1,0 +1,24 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "X-burguer",
+      "preco": 10.5
+    },
+    {
+      "id": 2,
+      "nome": "Coca",
+      "preco": 3
+    },
+    {
+      "id": 3,
+      "nome": "X-Cheese",
+      "preco": 14.5
+    },
+    {
+      "nome": "Lasanha",
+      "preco": 29,
+      "id": 4
+    }
+  ]
+}

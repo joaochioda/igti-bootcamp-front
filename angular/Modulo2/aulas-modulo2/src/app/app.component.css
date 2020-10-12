@@ -5,3 +5,7 @@ label {
 .active {
     background: rebeccapurple;
 }
+
+input[type="number"] {
+    width: 5em;
+}

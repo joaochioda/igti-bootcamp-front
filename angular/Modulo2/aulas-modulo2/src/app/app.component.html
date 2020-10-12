@@ -46,7 +46,7 @@
 <p>{{ myForms.value | json }}</p>
 <p>Status formulario: {{ myForms.status }}</p>
 
-
+<h3>Routes</h3>
 <ul>
   <li>
     <a routerLink="/page1" routerLinkActive="active">Page 1</a>
@@ -59,3 +59,26 @@
 <button (click)="goToPage2()">Ir para pagina 2</button>
 
 <router-outlet></router-outlet>
+
+<h3>Comunicação Back</h3>
+
+<form [formGroup]="form" (ngSubmit)="adicionarProduto()">
+  <input formControlName="nome" type="text" placeholder="Produto"/> 
+  R$ <input formControlName="preco" type="number"/> 
+  <input [disabled]="form.invalid" type="submit" value="Adicionar"/> 
+</form>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Preco</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let produto of produtos">
+    <td>{{produto.id}}</td>
+    <td>{{produto.nome}}</td>
+    <td>{{produto.preco}}</td>
+    <td><button (click)="excluirProduto(produto)">X</button></td>
+  </tr>
+</table>

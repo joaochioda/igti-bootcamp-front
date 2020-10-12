@@ -13,12 +13,13 @@ import { TodoListService } from './todoList.service';
 import {ReactiveFormsModule } from '@angular/forms';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
+import { HttpClientModule } from '@angular/common/http';
 export const TEMA = new InjectionToken<string>('app.theme');
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [AppComponent, CepPipe, CpfPipe, JoinStringsPipe, C2Component, Page1Component, Page2Component],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     TodoListService,

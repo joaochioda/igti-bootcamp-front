@@ -13,3 +13,6 @@ todo os dados serao compartilhados entre os componentes que utilizam
 ng generate pipe cpf - gerar pipe
 
 JSON.stringify(x) -> ver o objeto
+
+npm install -g json-server - instalar um backend a partir de um jhson
+json-server --watch backend.json
