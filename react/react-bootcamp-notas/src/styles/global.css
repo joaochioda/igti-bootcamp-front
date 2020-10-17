@@ -1,0 +1,57 @@
+.notas-por-modulo {
+    max-width: 600px;
+    min-width: 600px;
+}
+
+.notas-por-modulo > span{
+    margin: 20px;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.estilo-pagina {
+    display: flex;
+    flex-direction: row;
+}
+
+.notas-individuais {
+    padding: 10px;
+}
+
+.notas-individuais span {
+    font-weight: 500;
+    color: #14213d;
+}
+
+.pass {
+    font-weight: 500;
+    color: #2a9d8f;
+}
+
+.failed {
+    font-weight: 500;
+    color: #d62828;
+}
+
+.calculos > span {
+    margin: 20px;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-compilation {
+    min-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #14213d;
+    border: 1px solid #14213d; 
+    border-radius: 5px;
+}
+
+.card-compilation span {
+    margin-top: 10px;
+}
