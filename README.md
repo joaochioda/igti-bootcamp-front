@@ -30,3 +30,11 @@
 ![fotosAnimais](https://user-images.githubusercontent.com/47106171/95016653-b0d3dd80-062a-11eb-906d-ba6b297d6058.gif)
 
 
+
+#### React - twitter em react
+
+* Objetito: criar um mini twitter 
+
+![twitter](https://user-images.githubusercontent.com/47106171/97115475-b70f2400-16d5-11eb-9386-729de754c5d5.gif)
+
+

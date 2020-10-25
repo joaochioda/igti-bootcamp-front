@@ -1,0 +1,54 @@
+.span-green {
+  color: #27ae60;
+}
+.span-orange {
+  color: #f39c12;
+}
+.span-red {
+  color: #e74c3c;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+body {
+  background-color: #34495e;
+  color: white;
+}
+
+.text-area {
+  background-color: #34495e;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  height: 90px;
+  margin: 10px 0 20px 0px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.width-60 {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.tweets {
+    border: 2px solid #9b59b6;
+    border-radius: 5px;
+    margin: 10px 0px 10px;
+    padding: 5px;
+    width: 80%;
+    display: flex;
+}
+
+.tweets span {
+    width: 95%;
+}
+
+h1 {
+    text-align: center;
+}
