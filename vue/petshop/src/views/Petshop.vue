@@ -1,18 +1,18 @@
 <template>
-	<div>
-		<div class="row">
-			<div class="col">
-				<cadastro-cliente @novo-cadastro="novoCadastro"></cadastro-cliente>
-			</div>
-			<div class="col">
-				<Veterinario :clientes="clientesVeterinario"></Veterinario>
-				<Banho :clientes="clientesBanho"></Banho>
-			</div>
-		</div>
-		<div class="espaco-abaixo"></div>
-		<div class="espaco-abaixo"></div>
-		<Balanco></Balanco>
-	</div>
+  <div>
+    <div class="row">
+      <div class="col">
+        <cadastro-cliente @novo-cadastro="encaminharCliente"></cadastro-cliente>
+      </div>
+      <div class="col">
+        <Veterinario :clientes="clientesVeterinario"></Veterinario>
+        <Banho :clientes="clientesBanho"></Banho>
+      </div>
+    </div>
+    <div class="espaco-abaixo"></div>
+    <div class="espaco-abaixo"></div>
+    <Balanco></Balanco>
+  </div>
 </template>
 
 <script>
@@ -22,21 +22,21 @@ import Banho from "@/components/Banho.vue";
 import Balanco from "@/components/Balanco.vue";
 
 export default {
-	components: {
-		"cadastro-cliente": Recepcao,
-		Veterinario,
-		Banho,
-		Balanco
-	},
-	data() {
-		return {
-			clientesVeterinario: [],
-			clientesBanho: []
-		};
+  components: {
+    "cadastro-cliente": Recepcao,
+    Veterinario,
+    Banho,
+    Balanco
+  },
+  data() {
+    return {
+      clientesVeterinario: [],
+      clientesBanho: []
+    };
   },
   methods: {
-    novoCadastro(cliente) {
-      cliente.servico.tipo === 'banho'
+    encaminharCliente(cliente) {
+      cliente.servico.tipo === "banho"
         ? this.clientesBanho.push(cliente)
         : this.clientesVeterinario.push(cliente);
     }
