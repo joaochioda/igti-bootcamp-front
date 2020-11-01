@@ -1,0 +1,3 @@
+instalação cli - npm install -g @vue/cli
+vue --version - ver a versao
+vue create <nome>- install vue

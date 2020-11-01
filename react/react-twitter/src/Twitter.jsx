@@ -13,7 +13,16 @@ function Twitter() {
   const [open, setOpen] = React.useState({ status: false, message: "" });
   const [newTwitte, setNewTwitte] = useState("");
 
+  const v = React.useState(0);
+
+const y = v[0];
+
+const setY = v[1];
+console.log(setY);
   useEffect(() => {
+    console.log(uuidv4('dac7edb82-cda0-4da7-9504-39711a04adfbe'))
+  
+    
     fetchData();
   }, []);
 

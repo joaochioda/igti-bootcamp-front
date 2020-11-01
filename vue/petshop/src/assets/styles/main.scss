@@ -1,0 +1,23 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    .col {
+        width: 50%;
+    }
+}
+
+.espaco-abaixo {
+    margin-bottom: 10px;
+}
+
+.espaco-lado {
+    margin-right: 10px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to{
+    opacity: 0;
+}
