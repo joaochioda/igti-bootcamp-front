@@ -2,12 +2,12 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 
-Vue.filter('grana', (value) => {
-  if(typeof value !== 'number') {
+Vue.filter("grana", value => {
+  if (typeof value !== "number") {
     return value;
   }
-  return `R$ ${value.toFixed(2)}`
-})
+  return `R$ ${value.toFixed(2)}`;
+});
 
 Vue.config.productionTip = false;
 

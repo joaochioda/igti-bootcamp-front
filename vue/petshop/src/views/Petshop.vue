@@ -5,13 +5,16 @@
         <cadastro-cliente @novo-cadastro="encaminharCliente"></cadastro-cliente>
       </div>
       <div class="col">
-        <Veterinario :clientes="clientesVeterinario"></Veterinario>
-        <Banho :clientes="clientesBanho"></Banho>
+        <Veterinario
+          :clientes="clientesVeterinario"
+          @atendido="finalizarConsulta"
+        ></Veterinario>
+        <Banho :clientes="clientesBanho" @atendido="finalizarBanho"></Banho>
       </div>
     </div>
     <div class="espaco-abaixo"></div>
     <div class="espaco-abaixo"></div>
-    <Balanco></Balanco>
+    <Balanco :clientes="clientesAtendidos"></Balanco>
   </div>
 </template>
 
@@ -31,7 +34,8 @@ export default {
   data() {
     return {
       clientesVeterinario: [],
-      clientesBanho: []
+      clientesBanho: [],
+      clientesAtendidos: []
     };
   },
   methods: {
@@ -39,6 +43,23 @@ export default {
       cliente.servico.tipo === "banho"
         ? this.clientesBanho.push(cliente)
         : this.clientesVeterinario.push(cliente);
+    },
+    finalizarConsulta(cliente) {
+      this.clientesAtendidos.push(cliente);
+      this.$delete(
+        this.clientesVeterinario,
+        this.clientesVeterinario.findIndex(
+          clienteAtendido => clienteAtendido.nome === cliente.nome
+        ),
+        cliente
+      );
+    },
+    finalizarBanho(cliente) {
+      this.clientesAtendidos.push(cliente);
+
+      this.clientesBanho = this.clientesBanho.filter(
+        clienteAtendido => clienteAtendido.nome !== cliente.nome
+      );
     }
   }
 };

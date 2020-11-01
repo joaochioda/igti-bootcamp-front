@@ -38,6 +38,10 @@
         </select>
       </div>
       <div class="espaco-abaixo"></div>
+      <div v-if="cliente.servico.tipo === 'consulta'">
+        <label>Sintomas: </label>
+        <textarea rows="3" v-model="cliente.servico.observacoes"></textarea>
+      </div>
       <div>
         <button
           type="submit"
@@ -82,6 +86,7 @@ export default {
     },
     cadastrarCliente() {
       this.$emit("novo-cadastro", this.cliente);
+      this.cliente = new Cachorro();
     }
   }
 };
