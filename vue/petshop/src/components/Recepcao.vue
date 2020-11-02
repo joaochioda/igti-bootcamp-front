@@ -1,62 +1,56 @@
 <template>
   <div>
-    <h2>Bem vindo ao Petshop</h2>
-    <form @submit.prevent="cadastrarCliente">
-      <div>
-        <label class="espaco-lado">Nome do cliente:</label>
-        <input type="text" v-model="cliente.nome" />
-      </div>
-      <div class="espaco-abaixo"></div>
-      <div>
-        <label class="espaco-lado">Raça do PET</label>
-        <select v-model="cliente.raca">
-          <option v-for="(raca, index) in racas" :key="index">
-            {{ raca.nome }}
-          </option>
-        </select>
-      </div>
-      <div class="espaco-abaixo"></div>
-      <div>
-        <label class="espaco-lado">Idade:</label>
-        <input type="number" v-model="cliente.idade" />
-        <div class="erro" v-if="cliente.idade > 30">
-          Tem certeza que é um cachorro ?
-        </div>
-      </div>
-
-      <div class="espaco-abaixo"></div>
-      <div>
-        <label class="espaco-lado">Seviço</label>
-        <select v-model="cliente.servico">
-          <option
-            v-for="(servico, index) in servicos"
-            :key="index"
-            :value="servico"
-          >
-            {{ servico.nome }} {{ servico.preco | grana }}
-          </option>
-        </select>
-      </div>
-      <div class="espaco-abaixo"></div>
-      <div v-if="cliente.servico.tipo === 'consulta'">
-        <label>Sintomas: </label>
-        <textarea rows="3" v-model="cliente.servico.observacoes"></textarea>
-      </div>
-      <div>
-        <button
-          type="submit"
-          v-bind:disabled="
-            cliente.idade >= 30 ||
-              cliente.nome.length === 0 ||
-              cliente.raca.length === 0 ||
-              cliente.idade === 0 ||
-              cliente.servico.tipo.length === 0
-          "
-        >
-          Cadastrar cliente
-        </button>
-      </div>
-    </form>
+    <v-form>
+      <h1>Bem vindo ao Petshop</h1>
+      <v-spacer></v-spacer>
+      <v-text-field
+        label="Nome do cliente"
+        v-model="cliente.nome"
+      ></v-text-field>
+      <v-spacer></v-spacer>
+      <v-select
+        label="Raça do cachorro"
+        v-model="cliente.raca"
+        :items="racas"
+        item-text="nome"
+      ></v-select>
+      <v-spacer></v-spacer>
+      <v-text-field
+        label="Idade"
+        type="number"
+        v-model="cliente.idade"
+        :rules="[rules.idadeCanina]"
+      ></v-text-field>
+      <v-spacer></v-spacer>
+      <v-select label="Serviço" v-model="cliente.servico" :items="servicos">
+        <template v-slot:selection="data">
+          {{ data.item.nome }}
+        </template>
+        <template v-slot:item="data">
+          {{ data.item.nome }} {{ data.item.preco | grana }}
+        </template>
+      </v-select>
+      <v-spacer></v-spacer>
+      <v-textarea
+        v-if="cliente.servico && cliente.servico.tipo === 'consulta'"
+        label="Sintomas"
+        v-model="cliente.servico.observacoes"
+        rows="3"
+      ></v-textarea>
+      <v-spacer></v-spacer>
+      <v-btn
+        color="success"
+        @click="cadastrarCliente"
+        v-bind:disabled="
+          cliente.idade >= 30 ||
+            cliente.nome.length === 0 ||
+            cliente.raca.length === 0 ||
+            cliente.idade === 0 ||
+            cliente.servico.tipo.length === 0
+        "
+        >Cadastrar cliente</v-btn
+      >
+    </v-form>
   </div>
 </template>
 
@@ -68,12 +62,19 @@ export default {
     return {
       cliente: new Cachorro(),
       racas: [],
-      servicos: []
+      servicos: [],
+      rules: {
+        idadeCanina: value => value < 30 || "Tem certeza que é um cachorro ?"
+      }
     };
   },
   async created() {
-    this.racas = await this.buscarRacas();
-    this.servicos = await this.buscarServicos();
+    try {
+      this.racas = await this.buscarRacas();
+      this.servicos = await this.buscarServicos();
+    } catch (e) {
+      console.log(e);
+    }
   },
   methods: {
     async buscarRacas() {

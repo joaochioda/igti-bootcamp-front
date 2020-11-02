@@ -1,20 +1,34 @@
 <template>
   <div>
-    <div class="row">
-      <div class="col">
-        <cadastro-cliente @novo-cadastro="encaminharCliente"></cadastro-cliente>
-      </div>
-      <div class="col">
-        <Veterinario
-          :clientes="clientesVeterinario"
-          @atendido="finalizarConsulta"
-        ></Veterinario>
-        <Banho :clientes="clientesBanho" @atendido="finalizarBanho"></Banho>
-      </div>
-    </div>
-    <div class="espaco-abaixo"></div>
-    <div class="espaco-abaixo"></div>
-    <Balanco :clientes="clientesAtendidos"></Balanco>
+    <v-row>
+      <v-col cols="12" md="6" sm="12" xs="12">
+        <v-card class="pa-4">
+          <cadastro-cliente
+            @novo-cadastro="encaminharCliente"
+          ></cadastro-cliente>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" md="6" sm="12" xs="12">
+        <v-card class="pa-4 mb-4">
+          <Veterinario
+            :clientes="clientesVeterinario"
+            @atendido="finalizarConsulta"
+          ></Veterinario>
+        </v-card>
+        <v-card class="pa-4">
+          <Banho :clientes="clientesBanho" @atendido="finalizarBanho"></Banho>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-spacer></v-spacer>
+    <v-row>
+      <v-col sm="12">
+        <v-card class="pa-4">
+          <Balanco :clientes="clientesAtendidos"></Balanco>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 

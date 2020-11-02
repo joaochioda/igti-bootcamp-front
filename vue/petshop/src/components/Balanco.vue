@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Balanço</h1>
-    <table>
+    <v-simple-table>
       <thead>
         <tr>
           <th>Nome</th>
@@ -23,10 +23,13 @@
       <tfoot>
         <tr>
           <td>Total</td>
-          <td colspan="4">{{ totalServicos | grana }}</td>
+          <td colspan="3"></td>
+          <td>
+            <b>{{ totalServicos | grana }}</b>
+          </td>
         </tr>
       </tfoot>
-    </table>
+    </v-simple-table>
   </div>
 </template>
 
