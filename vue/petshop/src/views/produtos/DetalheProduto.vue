@@ -15,7 +15,7 @@
 				</div>
 
 				<span>{{ produto.descricao }}</span>
-				<v-btn color="secondary">
+				<v-btn color="secondary"  @click="addCarrinho(produto)">
 					Comprar
 				</v-btn>
 			</div>
@@ -47,7 +47,10 @@ export default {
 		},
 		irParaProdutos() {
 			this.$router.push("/ecommerce");
-		}
+		},
+		 addCarrinho(produto) {
+      this.$emit("add-carrinho", produto);
+    }
 	}
 };
 </script>
