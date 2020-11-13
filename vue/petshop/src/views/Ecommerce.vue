@@ -1,5 +1,21 @@
 <template>
   <div>
+  <v-snackbar
+      v-model="snackbar"
+    >
+      {{ text }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="pink"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
     <div>
       <Carrinho
         :produtos="carrinho"
@@ -20,11 +36,15 @@ export default {
   data() {
     return {
       carrinho: [],
+      snackbar: false,
+      text: `Produto adicionado ao carrinho com sucesso!`,
+      timeout: 2000,
     };
   },
   methods: {
     adicionarCarrinho(produto) {
       this.carrinho.push(produto);
+      this.snackbar = true;
     },
     removerDoCarrinho(produto) {
       const index = this.carrinho.findIndex(
