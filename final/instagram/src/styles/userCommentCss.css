@@ -1,0 +1,14 @@
+.UserPhotoComment img {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.UserPhotoComment {
+    display: flex;
+    align-items: center;
+}
+
+.UserPhotoComment span:nth-child(2) {
+    margin-right: 10px;
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+.card-by-post {
+    display: flex
+}
+
+.comments {
+    margin: 10px;
+}
+
+.post .MuiPaper-root {
+    margin: 10px;
+    background: #d1f0f1 !important;
+    color: #05668d;
+}
+
+.post .card-70 {
+    width: 70%;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 20px 15px 0px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.icons > * {
+    margin-left: 5px;
+}
+
+.post .content-user-post {
+    margin-right: 10px;
+}

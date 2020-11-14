@@ -1,0 +1,61 @@
+.loggedUser img {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.info-user-logged {
+    background: #d1f0f1 !important;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0 20px 0 20px;
+}
+
+.info-user-logged .personal-infos {
+    display: flex;
+    flex-direction: column;
+    color: #457b9d;
+}
+
+.change-logged-user {
+    background: #d1f0f1 !important;
+    margin-right: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loggedUser {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: 30px;
+}
+
+.change-logged-user .content {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #457b9d;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    margin: 0px 5px 2px 5px;
+}
+
+.active {
+    background-color: lightgray;
+}
+
+.change-logged-user .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.change-logged-user .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #457b9d;
+}
