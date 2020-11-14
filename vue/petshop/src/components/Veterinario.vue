@@ -35,7 +35,7 @@
 import Servico from "@/components/Servicos";
 export default {
   props: ["clientes"],
-  extends: Servico
+  extends: Servico,
 };
 </script>
 

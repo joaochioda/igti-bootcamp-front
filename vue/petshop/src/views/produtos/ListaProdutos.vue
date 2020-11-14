@@ -1,6 +1,9 @@
 <template>
+<div>
+
 	<div>
 		<h2>Lista Produtos</h2>
+</div>
 		<v-row>
 			<v-col
 				cols="12"
@@ -27,7 +30,7 @@
 						</div>
 
 						<span class="description">{{ produto.descricao }}</span>
-						<v-btn color="secondary">
+						<v-btn color="secondary" @click="addCarrinho(produto)">
 							Comprar
 						</v-btn>
 					</div>
@@ -56,7 +59,10 @@ export default {
 		async buscarProdutos() {
 			const { data } = await axios.get("http://localhost:3000/produtos");
 			return data;
-		}
+		},
+		 addCarrinho(produto) {
+      this.$emit("add-carrinho", produto);
+    }
 	}
 };
 </script>
